@@ -177,6 +177,10 @@
 
     self.mainLabel.highlighted = highlighted;
     self.subLabel.highlighted = highlighted;
+    if ([self.iconView isKindOfClass:[UIImageView class]]) {
+        UIImageView *imView = (UIImageView *)self.iconView;
+        imView.highlighted = highlighted;
+    }
 }
 
 #pragma mark -
